@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | O Futuro da Performance Humana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-background: #0a0a0a;
+            --color-surface: #1a1a1a;
+            --color-primary: #d4af37; /* Gold accent */
+            --color-text: #f0f0f0;
+            --color-text-secondary: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- Header & Hero --- */
+        .hero {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://images.pexels.com/photos/866027/pexels-photo-866027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            color: var(--color-text);
+        }
+
+        nav {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .hero-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            max-width: 800px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            color: var(--color-text-secondary);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: #e7c35a;
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background-color: var(--color-surface);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--color-primary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--color-text-secondary);
+        }
+
+        /* --- Testimonials --- */
+        #testimonials {
+            background-color: var(--color-surface);
+        }
+
+        .testimonial-card {
+            background-color: var(--color-background);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--color-primary);
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-text-secondary);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .testimonial-author span {
+            display: block;
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+
+        /* --- Call to Action Section --- */
+        #join {
+            text-align: center;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--color-surface);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .footer-content .logo {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .copyright {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                display: none; /* Simple approach for mobile, a full menu would require JS */
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">NEXUS</a>
+                <ul class="nav-links">
+                    <li><a href="#philosophy">Filosofia</a></li>
+                    <li><a href="#technology">Tecnologia</a></li>
+                    <li><a href="#experience">A Experiência</a></li>
+                    <li><a href="#join">Seja Membro</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content container">
+            <h1>A Interseção da Performance Humana e a Tecnologia de Ponta</h1>
+            <p>Uma experiência de fitness exclusiva, projetada para quem exige o extraordinário. Otimize seu corpo e mente com a precisão dos dados.</p>
+            <a href="#join" class="cta-button">Solicite seu Convite</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy">
+            <div class="container">
+                <h2 class="section-title">Nossa Filosofia</h2>
+                <p class="section-subtitle">Não acreditamos em treinos genéricos. Na NEXUS, cada movimento, cada caloria e cada momento de descanso são parte de um plano hiper-personalizado, impulsionado por inteligência artificial e análise biométrica.</p>
+                <div class="grid">
+                    <div class="feature-card">
+                        <h3>Personalização com IA</h3>
+                        <p>Nossos algoritmos de IA analisam seus dados em tempo real para ajustar seu treino, maximizando a eficiência e prevenindo lesões. Seu plano evolui com você.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Biometria Integrada</h3>
+                        <p>De scanners corporais 3D a wearables de última geração, integramos sua biometria para fornecer insights precisos sobre sua composição corporal, metabolismo e progresso.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Recuperação de Elite</h3>
+                        <p>A performance de pico exige uma recuperação inteligente. Oferecemos crioterapia, saunas de infravermelho e massagem terapêutica para acelerar sua regeneração.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="technology" style="background-color: var(--color-surface);">
+            <div class="container">
+                <h2 class="section-title">Tecnologia a Serviço do seu Corpo</h2>
+                <p class="section-subtitle">Utilizamos os equipamentos mais avançados do mundo para garantir que seu esforço seja medido, otimizado e convertido em resultados tangíveis.</p>
+                <div class="grid">
+                    <div class="feature-card">
+                        <h3>Equipamentos Smart</h3>
+                        <p>Máquinas de força que se ajustam automaticamente à sua capacidade e rastreiam cada repetição, garantindo a forma e a carga perfeitas.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Cardio com Realidade Virtual</h3>
+                        <p>Corra pelos alpes suíços ou reme por fiordes noruegueses. Nossa experiência de cardio imersiva torna o exercício uma aventura.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>App Exclusivo NEXUS</h3>
+                        <p>Todos os seus dados, treinos, agendamentos e comunicação com seu coach em um ecossistema digital intuitivo e poderoso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title">Mais que uma Academia, um Santuário</h2>
+                <p class="section-subtitle">Cada detalhe do nosso espaço foi projetado para oferecer conforto, privacidade e luxo. Um ambiente que inspira foco e bem-estar.</p>
+                <div class="grid">
+                    <div class="feature-card">
+                        <h3>Amenities de Luxo</h3>
+                        <p>Vestiários privativos, toalhas e produtos de higiene de alta qualidade, e serviço de valet. Sua única preocupação é o seu treino.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Nexus Health Bar</h3>
+                        <p>Smoothies pós-treino personalizados, refeições balanceadas criadas por chefs e nutricionistas, e café de especialidade.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Lounge & Networking</h3>
+                        <p>Um espaço sofisticado para relaxar, trabalhar ou conectar-se com outros membros. Fomente relações com líderes e inovadores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title">Resultados que Falam por Si</h2>
+                <p class="section-subtitle">Membros da NEXUS não apenas atingem seus objetivos, eles os superam. Veja o que nossa comunidade de alta performance tem a dizer.</p>
+                <div class="grid">
+                    <div class="testimonial-card">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Foto do Membro 1">
+                        <p class="testimonial-quote">"A abordagem baseada em dados da NEXUS mudou completamente meu entendimento sobre fitness. Os resultados são visíveis e mensuráveis."</p>
+                        <p class="testimonial-author">Ricardo Almeida<span>CEO, TechCorp</span></p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Foto da Membro 2">
+                        <p class="testimonial-quote">"Finalmente um lugar que entende que meu tempo é precioso. Cada minuto na NEXUS é otimizado para a máxima performance."</p>
+                        <p class="testimonial-author">Juliana Costa<span>Diretora de Inovação, FinBank</span></p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Foto do Membro 3">
+                        <p class="testimonial-quote">"O ambiente é impecável e a tecnologia é de outro mundo. É o investimento perfeito na minha saúde e bem-estar."</p>
+                        <p class="testimonial-author">Marcos Ferreira<span>Sócio-fundador, Venture Capital</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Section -->
+        <section id="join">
+            <div class="container">
+                <h2 class="section-title">Junte-se à Elite da Performance</h2>
+                <p class="section-subtitle">Nossas adesões são limitadas para garantir uma experiência verdadeiramente exclusiva e personalizada. Solicite seu convite para dar o primeiro passo em sua jornada de transformação.</p>
+                <a href="mailto:convites@nexus.fit" class="cta-button">Solicitar Convite por E-mail</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <a href="#" class="logo">NEXUS</a>
+            <ul class="footer-links">
+                <li><a href="#">Termos de Serviço</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <p class="copyright">&copy; 2024 NEXUS. Todos os direitos reservados. Projetado para a vanguarda da performance.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
