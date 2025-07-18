@@ -4,18 +4,6 @@
 
 ![Status](https://img.shields.io/badge/status-concluído-brightgreen?style=for-the-badge)
 
-<br>
-
-<p align="center">
-  <img src="URL_PARA_SUA_IMAGEM.png" alt="Screenshot da Landing Page NEXUS" width="800"/>
-</p>
-
-<p align="center">
-  <a href="[SEU_LINK_DO_GITHUB_PAGES_AQUI]" target="_blank">
-    <img src="https://img.shields.io/badge/Ver%20Demo%20Online-d4af37?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Ver Demo">
-  </a>
-</p>
-
 ---
 
 ## 📖 Sobre o Projeto
@@ -59,11 +47,11 @@ Como este é um projeto estático, não há necessidade de instalação de depen
 
 1.  Clone o repositório:
     ```bash
-    git clone [https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git](https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git)
+    git clone [https://github.com/pedrojtzonta/Nexus.git](https://github.com/pedrojtzonta/Nexus.git)
     ```
 2.  Navegue até a pasta do projeto:
     ```bash
-    cd SEU-REPOSITORIO
+    cd Nexus
     ```
 3.  Abra o arquivo `index.html` diretamente no seu navegador de preferência.
 
